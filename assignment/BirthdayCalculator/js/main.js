@@ -47,10 +47,9 @@ var Module = (function() {
       if(totalCount===0) {
         appendEmptyElement(weekItem);
       } else {
-        for (index=0; index<weekItem.value.length; index++) {
-          personInitial = weekItem.value[index];
+        weekItem.value.map(function(personInitial){
           appendPersonElement(personInitial, weekItem);
-        }
+        });
       }
     })
   }
